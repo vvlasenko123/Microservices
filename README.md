@@ -36,7 +36,7 @@ Cущности IdentityApi (Реляционный и трехслойный с
 
 REST:
 
-IdentityApi:
+`IdentityApi`:
 (метод, путь, тело)
 
 (Регистрация по email)  
@@ -85,7 +85,7 @@ GET /api/v1/users/me (id, firstName, lastName, email, phone, emailVerified, phon
 (Обновить профиль)  
 PATCH /api/v1/users/me (id, firstName, lastName)  
   
-ProductOrderApi:  
+`ProductOrderApi`:  
 (Создание заказа)  
 POST /api/v1/orders (productId, country, region, city, street, card?, phone?)  
 Результат: (orderId, status, totalAmount, currency, items[], createdAt)  
@@ -112,7 +112,7 @@ POST /api/v1/orders/{orderId}/cancel (reason)
 (Статус оплаты — входящий колбэк)  
 POST /api/v1/orders/{orderId}/payment-status (paymentId, status, failureCode?, failureMessage?)  
   
-ProductCatalogApi:  
+`ProductCatalogApi`:  
   
 (Список товаров)  
 GET /api/v1/products (id, name, stock, price, currency)  
@@ -126,7 +126,7 @@ GET /api/v1/products/{id}/price (productId, price, currency)
 (Остаток товара)  
 GET /api/v1/products/{id}/stock (productId, available)  
   
-ReserverProductApi:  
+`ReserverProductApi`:  
   
 (Остатки по товарам)  
 GET /api/v1/stocks (productId, available)  
@@ -144,7 +144,7 @@ POST /api/v1/reservations/{reservationId}/confirm
 (Снять резерв)  
 POST /api/v1/reservations/{reservationId}/release  
   
-PayServiceApi:  
+`PayServiceApi`:  
   
 (Создать платеж)  
 POST /api/v1/payments (orderId, amount, currency, method, cardToken?, phone?)  
@@ -163,7 +163,7 @@ GET /api/v1/refunds/{refundId} (refundId, paymentId, orderId, status, amount, cu
 (Уведомление о статусе платежа)  
 POST /api/v1/payments/{paymentId}/notify (status, failureCode?, failureMessage?)  
   
-NotificationApi:  
+`NotificationApi`:  
   
 (Отправить уведомление)  
 POST /api/v1/notifications/send (channel, to, template, variables)  
