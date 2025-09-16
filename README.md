@@ -35,11 +35,12 @@ Cущности IdentityApi (Реляционный и трехслойный с
 
 
 REST:
+
 IdentityApi:
 (метод, путь, тело)
 
-(Регистрация по email)
-POST /api/v1/auth/register/email (firstName, lastName, email, password)
+(Регистрация по email)  
+POST /api/v1/auth/register/email (firstName, lastName, email, password)  
 
 (Регистрация по phone)
 POST /api/v1/auth/register/phone (firstName, lastName, phone, password)
